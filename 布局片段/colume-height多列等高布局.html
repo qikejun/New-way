@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多列等高</title>
+    <style>
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            background: #eee;
+            overflow: hidden;
+        }
+
+        .left,
+        .right {
+            width: 200px;
+            float: left;
+            font-size: 16px;
+            line-height: 24px;
+            color: #333;
+            padding-bottom: 50000px;
+            margin-bottom: -50000px;
+        }
+
+        .left {
+            background-color: deeppink;
+        }
+
+        .right {
+            background-color: yellowgreen;
+        }
+
+        #container1 {
+            background-color: deeppink;
+        }
+
+        #container1 .right {
+            background-color: yellowgreen;
+        }
+
+        #container2 {
+            background-image: linear-gradient(90deg, yellowgreen 50%, deeppink 0);
+        }
+        #container3{
+            display: table;
+        }
+        #container3 .left,
+        #container3 .right,{
+            display: table-cell;
+        }
+        #container3 .left {
+            background-color: deeppink;
+        }
+
+        #container3 .right {
+            background-color: yellowgreen;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h3>margin-bottom与padding-bottom相冲</h3>
+    <div id="container" class="container">
+        <div class="left">多列等高布局左</div>
+        <div class="right">多列等高布局,使用正负 margin 与 padding 相冲的方式实现。多列等高布局,使用正负 margin 与 padding 相冲的方式实现。</div>
+    </div>
+    <h3>父容器设置背景</h3>
+    <div id="container1" class="container">
+        <div class="left">多列等高布局左</div>
+        <div class="right">多列等高布局,使用正负 margin 与 padding 相冲的方式实现。多列等高布局,使用正负 margin 与 padding 相冲的方式实现。</div>
+    </div>
+    <h3>父容器背景渐变</h3>
+    <div id="container2" class="container">
+        <div class="left">多列等高布局左</div>
+        <div class="right">多列等高布局,使用正负 margin 与 padding 相冲的方式实现。多列等高布局,使用正负 margin 与 padding 相冲的方式实现。</div>
+    </div>
+    <h3>父容器display：table；元素diaplay：table-cell；</h3>
+    <div id="container3" class="container">
+        <div class="left">多列等高布局左</div>
+        <div class="right">多列等高布局,使用正负 margin 与 padding 相冲的方式实现。多列等高布局,使用正负 margin 与 padding 相冲的方式实现。</div>
+    </div>
+</body>
+
+</html>

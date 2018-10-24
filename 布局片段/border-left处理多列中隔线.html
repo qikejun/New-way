@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>消失的边框</title>
+    <style>
+        .ul-container,
+        .ul-container1,
+        ul {
+            width: 300px;
+            overflow: hidden;
+        }
+
+        .ul-container ul {
+            margin-left: -1px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        /* ul::after {
+            display: block;
+            content: "";
+            clear: both;
+        } */
+
+        li {
+            margin-top: 10px;
+            float: left;
+            text-align: center;
+            width: 99px;
+        }
+
+        .ul-container li {
+            border-left: 1px solid #999;
+        }
+
+        .ul-container1,
+        .ul-container1 ul { 
+            width: 600px;
+        }
+
+        .ul-container1 li+li {
+            border-left: 1px solid #999;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>单行多行消失边界线处理</h3>
+    <div class="ul-container">
+        <ul>
+            <li>测试</li>
+            <li>消失</li>
+            <li>边界线</li>
+            <li>测试</li>
+            <li>消失</li>
+            <li>边界线</li>
+        </ul>
+    </div>
+    <h3>单行消失边界线处理(css选择器+可选择紧接的另一个元素，且二者有相同父元素。)</h3>
+    <div class="ul-container1">
+        <ul>
+            <li>测试</li>
+            <li>消失</li>
+            <li>边界线</li>
+            <li>测试</li>
+            <li>消失</li>
+            <li>边界线</li>
+        </ul>
+    </div>
+</body>
+
+</html>

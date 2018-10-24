@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1>div {
+            float: none;
+            margin: 0 auto;
+        }
+
+        /* .box {
+            text-align: center;
+        }
+
+        span {
+            display: inline-block;      
+        } */
+        /* 水平垂直居中 */
+        .box2{
+            position: relative;
+            height: 50px;
+        }
+        .box2 div{
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div>这里是一个不确定宽的块水平居中</div>
+    </div>
+    <div class="box2">
+        <div>
+            这是不确定宽的块水平垂直居中
+        </div>
+    </div>
+</body>
+</html>
