@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>被撑破的盒子</title>
     <style>
-        html,body{
+        html,
+        body {
             width: 100%;
         }
-        .box{
+
+        .box {
             width: 100%;
             height: 40px;
             background: #5a5a5a;
             border: 1px #333 dashed;
             display: inline-block;
         }
-        .inner{
+
+        .inner {
             width: 1024px;
             height: 40px;
             background: pink;
         }
     </style>
 </head>
+
 <body>
-<!--在浏览器窗口缩小的时候出现问题-->
-<span class="box">
-    <div class="inner"></div>
-</span>
+    在浏览器窗口缩小出现滚动条，滑动滚横向动条
+    <span class="box">
+        <div class="inner"></div>
+    </span>
 </body>
+
 </html>

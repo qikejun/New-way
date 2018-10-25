@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul li{width:280px;}
+        ul a{
+            border:1px solid #ededed;
+            line-height:40px;
+            transition:all 0.6s ease-in;
+        }
+        ul a:hover{border:1px solid pink;}
+
+        .border-line:after,
+        .border-line:before{
+            content:'';
+            display:block;
+            position:absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .border-line{
+            position:relative;
+            display:inline-block;
+            height:40px;
+            width: 100px;
+            background:none;
+            box-sizing:border-box;
+            box-shadow:inset 0 0 0 0 transparent;
+        }
+        .border-line:after,.border-line:before{
+            box-sizing:border-box;
+            border:1px solid transparent;
+            width:0;
+            height:0;
+        }
+        .border-line:after{
+            top:0;
+            left:0;
+            transition:border-color 0s ease-in 0.8s,width 0.2s ease-in 0.6s,height 0.2s ease-in 0.4s;
+        }
+        .border-line:before{
+            bottom:0;
+            right:0;
+            transition:border-color 0s ease-in 0.4s,width 0.2s ease-in 0.2s,height 0.2s ease-in;
+        }
+
+        .border-line:hover:after,.border-line:hover:before{
+            width:100%;
+            height:100%;
+        }
+        .border-line:hover:after{
+            border-top-color: #63ffd3;
+            border-right-color:#367dff;
+            transition:width 0.2s ease-out,height 0.2s ease-out 0.2s;
+        }
+        .border-line:hover:before{
+            border-bottom-color: #ffe6a9;
+            border-left-color: #ff4164;
+            transition:border-color 0s ease-out 0.4s,width 0.2s ease-out 0.4s,height 0.2s ease-out 0.6s;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a class="border-line"></a>
+        </li>
+    </ul>
+</body>
+</html>
